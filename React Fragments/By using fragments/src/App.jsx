@@ -3,16 +3,16 @@
 export const App = () => {
   return (
     // <Fragment>
-    //   <MyIntro />,
-    //   <MyIntro />,
+    //   <MyIntro />
+    //   <MyIntro />
     //   <MyIntro />
     // </Fragment>
 
     // *---------------------third method--------------------
     <>
-      <MyIntro />,
-      <MyIntro />,
-      <MyIntro />,
+      <MyIntro />
+      <MyIntro />
+      <MyIntro />
       <MyIntro />
     </>
   );
