@@ -1,4 +1,5 @@
 export const SeriesCard = (props) => {
+    // desttucturing of props
     const {id,img_url,name,rating,description,genre,cast,watch_url}= props.data;
     return (
     <li>
