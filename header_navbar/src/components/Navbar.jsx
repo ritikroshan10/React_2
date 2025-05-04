@@ -12,6 +12,7 @@ const Navbar = () => {
   return (
     <>
       <header className='header'>
+
         <a href="#" className='logo'>
           <img src={Logo} alt="" />
         </a>
@@ -25,6 +26,7 @@ const Navbar = () => {
           <a href="#contact">contact</a>
           <a href="#blogs">blogs</a>
         </nav>
+
         <div className='icons'>
           <div className='fas fa-search' onClick={searchHandler}></div>
           <div className='fas fa-shopping-cart'></div>
@@ -34,6 +36,7 @@ const Navbar = () => {
           <input type="search" name="" id="search-box" placeholder='Search here.....' />
           <label htmlFor="search-box" className='fas fa-search'></label>
         </div>
+        
       </header>
     </>
   )
