@@ -1,0 +1,95 @@
+const customers = [
+    {
+      id: 1,
+      name: 'Alice Johnson',
+      email: 'alice@example.com',
+      image: 'https://randomuser.me/api/portraits/women/44.jpg',
+      joined: '15-12-2024',
+      status: 'Active',
+    },
+    {
+      id: 2,
+      name: 'Bob Smith',
+      email: 'bob@example.com',
+      image: 'https://randomuser.me/api/portraits/men/46.jpg',
+      joined: '08-01-2023',
+      status: 'Inactive',
+    },
+    {
+      id: 3,
+      name: 'Clara Lee',
+      email: 'clara@example.com',
+      image: 'https://randomuser.me/api/portraits/women/65.jpg',
+      joined: '02-03-2025',
+      status: 'Active',
+    },
+    {
+      id: 4,
+      name: 'Jhon',
+      email: 'jhon@example.com',
+      image: 'https://randomuser.me/api/portraits/men/67.jpg',
+      joined: '01-06-2024',
+      status: 'Active',
+    },
+    {
+      id: 5,
+      name: 'Haley',
+      email: 'haley@example.com',
+      image: 'https://randomuser.me/api/portraits/women/60.jpg',
+      joined: '02-07-2022',
+      status: 'Active',
+    },
+    {
+      id: 6,
+      name: 'Charles',
+      email: 'charles@example.com',
+      image: 'https://randomuser.me/api/portraits/men/65.jpg',
+      joined: '20-03-2020',
+      status: 'Inactive',
+    },
+    {
+      id: 7,
+      name: 'Diana West',
+      email: 'diana@example.com',
+      image: 'https://randomuser.me/api/portraits/women/52.jpg',
+      joined: '10-09-2021',
+      status: 'Active',
+    },
+    {
+      id: 8,
+      name: 'Ethan Brooks',
+      email: 'ethan@example.com',
+      image: 'https://randomuser.me/api/portraits/men/54.jpg',
+      joined: '22-11-2023',
+      status: 'Inactive',
+    },
+    {
+      id: 9,
+      name: 'Fiona Glenn',
+      email: 'fiona@example.com',
+      image: 'https://randomuser.me/api/portraits/women/70.jpg',
+      joined: '12-02-2025',
+      status: 'Active',
+    },
+    {
+      id: 10,
+      name: 'George King',
+      email: 'george@example.com',
+      image: 'https://randomuser.me/api/portraits/men/58.jpg',
+      joined: '29-04-2022',
+      status: 'Inactive',
+    },
+    {
+      id: 11,
+      name: 'Isabelle Cruz',
+      email: 'isabelle@example.com',
+      image: 'https://randomuser.me/api/portraits/women/74.jpg',
+      joined: '05-01-2024',
+      status: 'Active',
+    },
+  ];
+ export default customers ;
+
+export const getStatusStyle = (status) => {
+    return status === 'Active'? 'bg-green-100 text-green-700':'bg-red-100 text-red-700';
+  };
