@@ -1,0 +1,45 @@
+body{
+  margin: 0;
+}
+.modaloverlay{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: none;
+}
+
+.modaldiv{
+  width: 320px;
+  height: 320px;
+  position: fixed;
+  background-color: white;
+  color: black;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  top: -500%;
+  transition: 0.3s;
+}
+
+h3{
+  text-align: center;
+}
+
+.en{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.modalopen{
+  display: block;
+}
+
+.openmodaldiv{
+   top: 50%;
+}
+
+span{
+  cursor: pointer;
+}
