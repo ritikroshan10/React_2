@@ -1,0 +1,23 @@
+.menu{
+  width: 80%;
+  position: fixed;
+  height: 100vh;
+  background-color: yellow;
+  text-align: left;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.menu ul li{
+  list-style: none;
+  padding: 10px 10px;
+}
+
+.icon{
+  position: absolute;
+  right: 95px;
+}
+
+.activeMenu{
+  left: 0%;
+}
