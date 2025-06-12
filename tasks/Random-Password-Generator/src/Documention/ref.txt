@@ -1,0 +1,41 @@
+-------------password generator documentation---------------
+
+step 1--create a password box 
+
+
+step 2--create a four state for lower,upper,number and symbols
+
+
+step 3--then pass variable(state) in checked and function used to opposite(change) the
+variable  checked={uppercase} onChange={()=>{setUppercase(!uppercase)}}
+
+
+step 4--create a generatepassword function in which
+a-- create a variable charset which is used to store charse
+now aply if else block
+in if block check condition and store in charset
+
+step 5-- create a one more state for number (password length)
+let [passlength, setPasslength] = useState(6)
+
+in password length
+value={passlength} onChange={(e)=>{setPasslength(e.target.value)}}
+
+step 6--move to 4 step and in which create a variable for generate password
+create a variable 
+then in if block using for loop
+generate password based on password length  in which we use Math.floor() and Math.random()
+
+
+step-7 now create a another state for show password in input box
+let [finalpass, setFinalpass] = useState('')
+
+in input----value={finalpass}
+ and after for loop -------setFinalpass(finalpassword);
+
+
+step-8 copy a password
+ let copypass =()=>{
+    navigator.clipboard.writeText(finalpass)
+    alert("Password copy Successfully")
+  }
