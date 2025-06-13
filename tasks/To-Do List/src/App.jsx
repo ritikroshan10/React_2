@@ -54,6 +54,7 @@ function App() {
         progress: undefined,
         theme: "colored"
       });
+      event.target.todoname.value = '';
     }
 
     else {
@@ -109,7 +110,7 @@ export default App
 function ToDoListItems({ value, indexNumber, todolist, setToDoList }) {
 
   let [status, setStatus] = useState(false)
-  
+
   // -----------------6 step for delete task---------------
   let deleteRow = () => {
     let finalData = todolist.filter((v, i) => i != indexNumber)
