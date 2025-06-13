@@ -1,0 +1,55 @@
+-----------design part-----------
+
+step-1 h1 
+
+step-2 create a component  for category in which simply heading and list of category,,,then call this component in app.jsx 
+call this category in a div which is divided in 2 parts
+
+step-3 in app create a another div for products inside the upper grid div
+in product div also add a grid cols 3 for products
+
+step-4 create a component for products items i have create this component in the app.jsx
+in this componet img,p for money and type
+
+-------------------functionality------------
+
+step-1 copy api from dummy.json
+
+step-2 axios package for api handel install from npm websites
+
+step-3 for get category
+ cretae a funtion for gerCategory and in which first handel api
+ then in useeffect call function [] dependencies means this function call only on time when page open 
+
+ now to store the response create a state  const [finalCategory, setFinalCategory] = useState([])  and store a finalres in the finalCategory
+ using  setFinalCategory function...
+
+ now finalCategory pass as a props in category component so that we can use its data to show the category in result,,
+ now in categpry component access list of category
+
+step-4 fir get product
+api ko handel karne ke bad setFinalProducts function me final response dal kr fir FinalProducts pr map lga kr,
+ProductsItems me products ko as a proprs bhej kr ProductsItems wale component me products ko dikha denge..
+
+step-5 now for filter effect
+1 const [categoryname, setCategoryname] = useState('')
+2 setCategoryname function pass as a proprs in category component
+3 in category componet onclick on li then in setCategoryname function v.name pass as agrumnet
+4 this v.name store in categoryname
+5 
+  useEffect(() => {
+    if (categoryname !== "") {
+      axios.get(`https://dummyjson.com/products/category/${categoryname}`)
+        .then((proRes) => proRes.data)
+        .then((finalProRes) => {
+          setFinalProducts(finalProRes.products)
+        })
+    }
+  }, [categoryname])
+
+  this api give products based on categoryname and at last store final result in FinalProducts through setFinalProducts...
+
+
+
+
+
