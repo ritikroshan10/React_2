@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [todolist, setToDoList] = useState([])
 
-  // -----------7 step for get the data from local storage----------
+  // -----------8 step for get the data from local storage----------
   useEffect(() => {
     const storedList = localStorage.getItem("todolist");
     if (storedList) {
@@ -125,6 +125,7 @@ function ToDoListItems({ value, indexNumber, todolist, setToDoList }) {
     });
   }
 
+  //---------------- step 7----------------
 
   let checkStatus = () => {
     setStatus(!status)
