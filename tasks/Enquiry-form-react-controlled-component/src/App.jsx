@@ -190,7 +190,6 @@ function App() {
                     <td colSpan={6}>No data found</td>
                   </tr>
                 }
-
               </tbody>
             </table>
           </div>

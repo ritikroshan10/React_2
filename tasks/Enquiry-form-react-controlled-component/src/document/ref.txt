@@ -1,0 +1,57 @@
+---------------------------USING BOOTSTRAP---------------------------
+
+step-1 create a form and give a name on each input filled
+
+step-2 create a state for input data handel
+
+step-3 function to update data on formData variable
+  first get old data
+  get input name 
+  get input value
+  pass input value in the input name
+  then set data
+
+step-4 create a another state os we can save the user data(and used to show data)
+
+step-5   let oldUserData = [...userData, currentUserFormdata] //old array + new array
+        console.log(oldUserData);
+
+step-6  create a curent data 
+       let currentUserFormdata = {
+            uname: formData.uname,
+            uemail: formData.uemail,
+            uphone: formData.uphone,
+            umessage: formData.umessage
+        }
+
+step-7   jb hm form ko save kr dete hai uske bad form ko khali kr denge
+
+step-8   validate same phone number or email not add
+
+step-9   delete logic
+
+step-10  edit logic
+
+           let editRow = (indexNumber) => {
+           This is an arrow function named editRow that takes one argument: indexNumber.
+           
+           indexNumber is the index of the row (or user) you want to edit from the userData array.
+           
+           ✅ let editData = userData[indexNumber];
+           This line retrieves the data from the userData array at the given index.
+           
+           For example, if indexNumber is 2, then editData will be userData[2].
+           
+           ✅ console.log(editData);
+           Logs the retrieved data to the console for debugging, so you can see what data you're about to edit.
+           
+           ✅ setFormData({ ...editData, index: indexNumber });
+           setFormData is a state updating function (probably from useState) used to fill the form with values.
+           
+           ...editData spreads all the fields of editData into a new object.
+           
+           index: indexNumber adds the index into the form data object, so you can later use it to update that specific item.
+
+step-11     update logic 
+
+step-12     ig phone or number exit then show error
