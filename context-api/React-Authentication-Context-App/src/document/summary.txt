@@ -1,0 +1,51 @@
+*************AuthContext.js***********
+
+createContext() creates a context object.
+
+This context will be used by both provider and consumer components.
+
+Exporting it allows us to use useContext(AuthContext) later.
+
+*******************AuthProvider.jsx*************
+
+user: holds the current user data (null if logged out).
+
+login(userData): sets the user to given object (e.g., {name, email}).
+
+logout(): resets user to null.
+
+isLoggedIn: !!user: gives a boolean (true if logged in).
+
+The context provides all these to its child components.
+
+The children means this provider can wrap any other components.
+
+*********************App.js************************
+The whole app (here just Dashboard) is wrapped in AuthProvider.
+
+This gives all components access to the auth context values.
+
+Now, Dashboard can check login status and call login() or logout() directly.
+
+******************Dashboard.js********************
+useContext(AuthContext): gets current auth data from context.
+
+isLoggedIn: true if user exists, false if null.
+
+login(demoUser): sets user data.
+
+logout(): clears user data.
+
+It shows different UI for logged-in and logged-out state.
+
+
+------------------------------Data Flow Diagram------------------------
+[AuthProvider]
+    |
+    └── Provides => user, isLoggedIn, login(), logout()
+
+[Dashboard]
+    |
+    └── Uses => useContext(AuthContext) to show info or login/logout
+
+

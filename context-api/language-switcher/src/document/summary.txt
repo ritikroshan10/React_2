@@ -1,0 +1,35 @@
+---------------LanguageContext.js-----------------
+
+Creates a global LanguageContext using createContext()
+
+This context will store and share the current language and a toggle function
+
+It’s exported to be used in both the provider and consumer components
+
+-----------------------LanguageProvider.jsx---------------
+
+Part	                    Meaning
+-----                       ---------
+useState('en')	            Starts with English (en) as default language
+toggleLanguage()	        Switches between 'en' and 'hi'
+LanguageContext.Provider	Shares language and toggleLanguage to children components
+{children}	                Wraps the components that need access to this context
+
+Now, any component wrapped in LanguageProvider can read and change the language.
+
+-------------------------app.jsx------------------
+
+Wraps the entire app (in this case, just Content) with LanguageProvider
+
+Makes the language data available to Content and any other components inside
+
+------------------content.jsx-------------
+
+| Line                                | Explanation                                                            |
+| ----------------------------------- | ---------------------------------------------------------------------- |
+| `useContext(LanguageContext)`       | Accesses `language` (current language) and `toggleLanguage()`          |
+| `translations[language]`            | Picks the correct object from the translation list (based on language) |
+| `translations[language].greeting`   | Gets the greeting message in the selected language                     |
+| `translations[language].button`     | Gets the button label in the selected language                         |
+| `<button onClick={toggleLanguage}>` | Calls the toggle function to change the language                       |
+
