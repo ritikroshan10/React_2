@@ -1,0 +1,17 @@
+--------------------------------------------------------------------------
+
+ThemeContext.js      →  🪣 (empty bucket)
+ThemeProvider.js     →  🪣💧 (fills the bucket with data)
+ThemedComponent.js   →  🧑‍🔧 uses the bucket's data via useContext
+
+---------------------------------------------------------------------------
+
+**********************Data Flow Summary*************
+
+ThemeContext is created using createContext()
+
+ThemeProvider holds the theme state and provides theme and toggleTheme via ThemeContext.Provider
+
+App.js wraps all components inside ThemeProvider
+
+ThemedComponent uses useContext(ThemeContext) to access theme and update UI
